@@ -17,6 +17,7 @@ func LoadConfig(path string) (config Config, err error){
 
 	// readvalues from direct environment 
 	viper.AutomaticEnv() // checks the env var names
+	// can overwrites on file env values
 
 	err = viper.ReadInConfig()
 	if err != nil {
